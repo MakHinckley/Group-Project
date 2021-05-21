@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT STATIC/CSS  -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <!-- I use container for the main div but we can change to wrapper or what you prefer -->
+    <div id="container">
+        <h1>Login Page</h1>
+        <form class="login" action="/login" method="post">
+            {% csrf_token %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li> {{message}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <!-- EDIT TYPE EMAIL TO ALIAS/EMAIL -->
+            <input type="email" name="Email" placeholder="Email">
+            <input type="password" name="Password" placeholder="Password">
+            <input type="submit" value="Login">
+            <hr>
+            <a href="/registerPage">Register</a>
+        </form>
+    </div>
+</body>
+</html>
