@@ -10,33 +10,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- EDIT CSS/STATIC -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
     <title>Register</title>
 </head>
-<body id="bg" style='background-image: url('{% static "images/login.jpg" %}');'>
-    <div id="container">
+<body id="bg" style="background-image:url('{%static "images/login.jpg"%}');">
+    <div class="arcade-intro">
         <h1>Please register!</h1>
         <!-- set required in form -->
-        <form class="register" name="form" action="/register" method="post">
-            {% csrf_token %}
-            <!-- ADJUST BACK BUTTON TO WORK FOR THE PAGE -->
-            <a class="back" href="/">X</a>
-            {% if messages %}
+        {% if messages %}
             <ul>
                 {% for message in messages %}
                 <li> {{message}}</li>
                 {% endfor %}
             </ul>
             {% endif %}
-            <input type="text" name="First_Name" placeholder="First Name">
-            <input type="text" name="Last_Name" placeholder="Last Name">
-            <input type="text" name="Alias" placeholder="Alias">
-            <input type="email" name="Email" placeholder="Email">
-            <input type="password" name="Password" placeholder="Password">
-            <input type="password" name="Confirm_pw" placeholder="Confirm Password">
-            <input type="submit" value="Register">
-        </form>
         
+        <form class="register" name="form" action="/register" method="post">
+            {% csrf_token %}
+            <div class='col-md-3'>    
+            
+            <br>
+            <input class="form-control" type="text" name="First_Name" placeholder="First Name">
+            <br>
+            <input class="form-control" type="text" name="Last_Name" placeholder="Last Name">
+            <br>
+            <input class="form-control" type="text" name="Alias" placeholder="Alias">
+            <br>
+            <input class="form-control" type="email" name="Email" placeholder="Email">
+            <br>
+            <input class="form-control" type="password" name="Password" placeholder="Password">
+            <br>
+            <input class="form-control" type="password" name="Confirm_pw" placeholder="Confirm Password">
+            <br>
+            <input class= "btn btn-outline-warning" type="submit" value="Register">| <a class="back" href="/users/login"> Back to Login</a>
+        </form>
+        </div>
     </div>
 </body>
 </html>

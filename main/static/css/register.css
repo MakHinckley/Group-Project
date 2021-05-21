@@ -1,0 +1,40 @@
+*{
+    margin:0%
+
+}
+#bg{
+    font-family: 'Press Start 2P', cursive;
+    background-repeat: no-repeat;
+    background-size: 2140px 1100px;
+    background-position: top;
+    background-attachment: fixed;
+    
+}
+.arcade-intro h1{
+    color: rgb(85, 199, 197);
+    text-shadow: 4px 4px 3px rgb(85,199,197);
+    position: relative;
+    margin-left: 35%;
+    margin-top:3%;
+    
+
+}
+
+.arcade-intro h4{
+    color:rgb(255, 69, 0);
+    text-shadow: 2px 2px 3px rgb(255,69,0);
+    margin-left: 46%;
+    margin-top: 2%;
+    animation-delay: 2s;
+}
+
+form .col-md-3{
+    position:relative;
+    margin-top: 3%;
+    margin-left: 38%
+
+}
+a{
+    color:rgb(211, 28, 202);
+
+}

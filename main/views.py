@@ -7,6 +7,9 @@ from django.db.models import Count
 def index(request):
     return render(request,"index.html")
 
+def registerPage(request):
+    return render(request, "register.html")
+
 def create_user(request):
     if request.method == "POST":
         errors = User.objects.create_validator(request.POST)
