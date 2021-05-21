@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from .models import *
 from django.contrib import messages
 import bcrypt
 from django.db.models import Count
 
 def index(request):
-    return HttpResponse("Hello!! I'm working properly!")
+    return render(request,"index.html")
 
 def create_user(request):
     if request.method == "POST":
