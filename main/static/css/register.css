@@ -8,6 +8,7 @@
     background-size: 2140px 1100px;
     background-position: top;
     background-attachment: fixed;
+    background-image: url("../images/login.jpg"); 
     
 }
 .arcade-intro h1{
