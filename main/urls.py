@@ -5,9 +5,9 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('users/create', views.create_user),
+    path('register', views.register),
     path('welcome', views.welcome),
-    path('users/login', views.login),
+    path('login', views.login),
     path('logout',views.logout),
     path('recently_played', views.recently_played),
 ]
