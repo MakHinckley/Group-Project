@@ -11,5 +11,4 @@ urlpatterns = [
     path('registerPage', views.registerPage),
     path('recently_played', views.recently_played),
     path('admin/', admin.site.urls),
-    
 ]
