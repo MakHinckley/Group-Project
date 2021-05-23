@@ -2,12 +2,15 @@
     margin:0%
 
 }
+
+
 #bg{
     font-family: 'Press Start 2P', cursive;
     background-repeat: no-repeat;
     background-size: 2140px 1100px;
     background-position: top;
     background-attachment: fixed;
+    background-image: url("../images/login.jpg"); 
     
 }
 .arcade-intro h1{
