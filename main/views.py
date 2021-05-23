@@ -1,11 +1,14 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect
 from .models import *
 from django.contrib import messages
 import bcrypt
 from django.db.models import Count
 
 def index(request):
-    return HttpResponse("Hello!! I'm working properly!")
+    return render(request,"index.html")
+
+def registerPage(request):
+    return render(request, "register.html")
 
 def register(request):
     if request.method == "POST":
