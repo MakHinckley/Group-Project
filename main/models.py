@@ -14,7 +14,7 @@ class UserManager(models.Manager):
             errors['email'] = "Email is too short"
         if len(reqPOST['password']) < 8:
             errors['password'] = "Password is too short"
-        if reqPOST['password'] != reqPOST['password_conf']:
+        if reqPOST['password'] != reqPOST['confirm_pw']:
             errors['match'] = "Password and password confirmation don't match"
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         if not EMAIL_REGEX.match(reqPOST['email']):
