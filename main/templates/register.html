@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- EDIT CSS/STATIC -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/register.css' %}">
     <title>Register</title>
@@ -17,6 +16,28 @@
     <div class="arcade-intro">
         <h1>Please register!</h1>
         <!-- set required in form -->
+        
+        
+        <form class="register" name="form" action="/register" method="post">
+            {% csrf_token %}
+            <div class='col-md-3'>    
+            
+            <br>
+            <input class="form-control" type="text" name="first_name" placeholder="First Name" required>
+            <br>
+            <input class="form-control" type="text" name="last_name" placeholder="Last Name" required>
+            <br>
+            <input class="form-control" type="text" name="alias_gamert" placeholder="Alias/Gamertag" required>
+            <br>
+            <input class="form-control" type="email" name="email" placeholder="Email" required>
+            <br>
+            <input class="form-control" type="password" name="password" placeholder="Password" required>
+            <br>
+            <input class="form-control" type="password" name="confirm_pw" placeholder="Confirm Password" required>
+            <br>
+            <input class= "btn btn-outline-warning" type="submit" value="Register"> <a class="back" href="/login"> Back to Login</a>
+        </form>
+        <!-- fix color- currently shows up as black. add top padding -->
         {% if messages %}
             <ul>
                 {% for message in messages %}
@@ -24,26 +45,6 @@
                 {% endfor %}
             </ul>
             {% endif %}
-        
-        <form class="register" name="form" action="/register" method="post">
-            {% csrf_token %}
-            <div class='col-md-3'>    
-            
-            <br>
-            <input class="form-control" type="text" name="first_name" placeholder="First Name">
-            <br>
-            <input class="form-control" type="text" name="last_name" placeholder="Last Name">
-            <br>
-            <input class="form-control" type="text" name="alias_gamert" placeholder="Alias/Gamertag">
-            <br>
-            <input class="form-control" type="email" name="email" placeholder="Email">
-            <br>
-            <input class="form-control" type="password" name="password" placeholder="Password">
-            <br>
-            <input class="form-control" type="password" name="confirm_pw" placeholder="Confirm Password">
-            <br>
-            <input class= "btn btn-outline-warning" type="submit" value="Register"> <a class="back" href="/login"> Back to Login</a>
-        </form>
         </div>
     </div>
 </body>

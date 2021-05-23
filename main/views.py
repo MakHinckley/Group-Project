@@ -16,7 +16,7 @@ def register(request):
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/')
+            return redirect('/registerPage')
         else:
             password = request.POST['password']
             pw_hash = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()

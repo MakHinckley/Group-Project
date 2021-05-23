@@ -10,22 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- EDIT STATIC/CSS  -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/login_style.css' %}">
     <title>Login</title>
 </head>
-<!-- Please ignore error ") expected", it won't affect the server from running-->
 
 <body id="bg">
     
-    <!-- I use container for the main div but we can change to wrapper or what you prefer -->
     <div class="arcade-intro">
         <h1 class="animate__animated animate__zoomInUp">Welcome to the Arcade!</h1>
         <h3 class="animate__animated animate__zoomInUp">Please login or register below!</h3>
         <h4 class="animate__animated animate__zoomInUp">Login</h4>
     </div>
 
+    
+
+    <form class="row g-3" action="/login" method="post">
+        {% csrf_token %}
+        <div class='col-md-3'>
+            <input class="form-control" type="email" name="email" placeholder="Email" required>
+            <br>
+            <input class="form-control" type="password" name="password" placeholder="Password" required>
+            <br>
+            <input class= "btn btn-outline-warning" type="submit" value="Login"> <a href="/registerPage">Register!</a>    
+    </form>
+    <!-- add top padding -->
     {% if messages %}
     <ul>
         {% for message in messages %}
@@ -33,17 +42,6 @@
         {% endfor %}
     </ul>
     {% endif %}
-
-    <form class="row g-3" action="/login" method="post">
-        {% csrf_token %}
-        <div class='col-md-3'>
-            <!-- EDIT TYPE EMAIL TO ALIAS/EMAIL -->
-            <input class="form-control" type="email" name="email" placeholder="Email">
-            <br>
-            <input class="form-control" type="password" name="password" placeholder="Password">
-            <br>
-            <input class= "btn btn-outline-warning" type="submit" value="Login"> <a href="/registerPage">Register!</a>    
-    </form>
     </div>
     </div>
 </body>
