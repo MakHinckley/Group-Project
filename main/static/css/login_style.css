@@ -44,12 +44,10 @@
 .col-md-3 input{
     position: relative;
     margin-top:25px;
+    margin-bottom:20px;
 }
 .col-md-3 a{
     color:rgb(211, 28, 202);
     position: relative;
-    padding:100px;
-    margin-top:2%;
-    
-    
+    padding-left:15%;
 }

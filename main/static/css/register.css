@@ -15,8 +15,9 @@
     color: rgb(85, 199, 197);
     text-shadow: 4px 4px 3px rgb(85,199,197);
     position: relative;
-    margin-left: 35%;
+    margin-left: 32%;
     margin-top:3%;
+    padding:80px;
     
 
 }
@@ -28,14 +29,19 @@
     margin-top: 2%;
     animation-delay: 2s;
 }
-
-form .col-md-3{
+.col-md-3{
     position:relative;
     margin-top: 3%;
     margin-left: 38%
 
 }
-a{
+.col-md-3 input{
+    position: relative;
+    margin-top:25px;
+    margin-bottom:20px;
+}
+.col-md-3 a{
     color:rgb(211, 28, 202);
-
+    position: relative;
+    padding-left:15%;
 }
