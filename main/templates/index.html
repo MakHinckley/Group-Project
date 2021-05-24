@@ -29,12 +29,11 @@
         {% csrf_token %}
         <div class='col-md-3'>
             <input class="form-control" type="email" name="email" placeholder="Email" required>
-            <br>
             <input class="form-control" type="password" name="password" placeholder="Password" required>
-            <br>
-            <input class= "btn btn-outline-warning" type="submit" value="Login"> <a href="/registerPage">Register!</a>    
+            <input class= "btn btn-outline-warning" type="submit" value="Login"><a href="/registerPage">Register!</a>    
     </form>
     <!-- add top padding -->
+    
     {% if messages %}
     <ul>
         {% for message in messages %}

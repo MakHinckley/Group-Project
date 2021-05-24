@@ -37,13 +37,19 @@
     margin-top: 2%;
     animation-delay: 2s;
 }
-
-form .col-md-3{
-    position:relative;
-    margin-top: 5%;
-    margin-left: 38%
-
+.col-md-3{
+    margin-top: 3%;
+    margin-left:38%
 }
-a{
+.col-md-3 input{
+    position: relative;
+    margin-top:25px;
+}
+.col-md-3 a{
     color:rgb(211, 28, 202);
+    position: relative;
+    padding:100px;
+    margin-top:2%;
+    
+    
 }
