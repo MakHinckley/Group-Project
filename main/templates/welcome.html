@@ -14,10 +14,30 @@
     <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
     <title>Document</title>
 </head>
+<!-- Don't mind the CSS, I'll fix it later! -->
 <body id="bg">
     <div class="arcade-intro">
         <a class="back" href="/logout">Logout</a>
         <h1>Welcome {{logged_user.alias_gamert}}!</h1> 
     </div>
+    <div class="games">
+        <h5>Space Shooter game </h5>
+        <input class= "btn btn-outline-warning" type="submit" value="Play Now!">
+        <img src="#">
+        <p> A game where you shoot at your opponent and try to get their health to 0!</p>
+    </div>
+    <div class="games">
+        <h5>Sudoku </h5>
+        <input class= "btn btn-outline-warning" type="submit" value="Play Now!">
+        <img src="#">
+        <p>Something to describe Sudoku!</p>
+    </div>
+    <div class="games">
+        <h5>Frog Jump </h5>
+        <input class= "btn btn-outline-warning" type="submit" value="Play Now!">
+        <img src="#">
+        <p> Try to get your frog across the board without getting hit!</p>
+    </div>
+
 </body>
 </html>
