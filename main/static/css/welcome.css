@@ -1,0 +1,21 @@
+*{
+    margin:0%
+
+}
+#bg{
+    font-family: 'Press Start 2P', cursive;
+    background-repeat: no-repeat;
+    background-size: 2140px 1100px;
+    background-position: top;
+    background-attachment: fixed;
+    background-image: url("../images/login.jpg"); 
+    
+}
+
+.arcade-intro h1{
+    color: rgb(85, 199, 197);
+    text-shadow: 4px 4px 3px rgb(85,199,197);
+    position: relative;
+    margin-left: 37%;
+    margin-top:3%;
+}
