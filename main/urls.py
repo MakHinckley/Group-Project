@@ -9,6 +9,7 @@ urlpatterns = [
     path('login', views.login),
     path('logout',views.logout),
     path('registerPage', views.registerPage),
+    path('gamePage', views.gamePage),
     path('recently_played', views.recently_played),
     path('admin/', admin.site.urls),
 ]

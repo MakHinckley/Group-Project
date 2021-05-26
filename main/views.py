@@ -44,6 +44,9 @@ def login(request):
         messages.error(request, "Email or password are not right")
     return redirect('/')
 
+def gamePage(request):
+    return render(request, 'gamePage.html')
+
 def logout(request):
     request.session.flush()
     return redirect('/')

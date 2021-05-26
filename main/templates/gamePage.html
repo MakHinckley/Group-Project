@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- EDIT STATIC/CSS  -->
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
     <title>Document</title>
 </head>
-<body>
-    <h1>Welcome!</h1>
+<body id="bg">
+    <div class="arcade-intro">
+        <a class="back" href="/logout">Logout</a>
+        <h1>Game Title!</h1>
+        <p>Game Rules/ Instructions</p>
+        <a class="back" href="/welcome">Back</a>
+    </div>
 </body>
 </html>
