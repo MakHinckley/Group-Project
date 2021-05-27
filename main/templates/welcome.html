@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.8.9/brython.min.js">
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,30 +22,34 @@
         <a class="back" href="/logout">Logout</a>
         <h1>Welcome {{logged_user.alias_gamert}}!</h1> 
     </div>
+
     <div class="games">
-        <h5>Space Shooter game </h5>
-        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src="#">
+        <h5>Space Shooter </h5>
         <p> A game where you shoot at your opponent and try to get their health to 0!</p>
-    </div>
-    <div class="games">
-        <h5>Sudoku </h5>
+        <img src= "/static/images/spaceShooter.png" alt="connect 4 screenshot" style="width:200px; height:200px;">
         <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src= "#">
-        <p>Something to describe Sudoku!</p>
-    </div>
-    <div class="games">
-        <h5>Frog Jump </h5>
-        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src="#">
-        <p> Try to get your frog across the board without getting hit!</p>
-    </div>
-    <div class="games">
-        <h5>Connect 4</h5>
-        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src="#">
-        <p> Try to get four chips in a row without being interupted!</p>
     </div>
 
+    <div class="games">
+        <h5>Sudoku </h5>
+        <p> Try to fill the empty boxes without any repeat numbers!</p>
+        <img src= "/static/images/sudoku.png" alt="connect 4 screenshot" style="width:200px; height:200px;">
+        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
+    </div>
+
+    <div class="games">
+        <h5>Connect 4 </h5>
+        <p> Try to get four tokens in a row before your opponent!</p>
+        <img src= "/static/images/connect4.jpg" alt="connect 4 screenshot" style="width:200px; height:200px;">
+        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
+    </div>
+
+    <div class="games">
+        <h5>Jumpy Frog </h5>
+        <p> Get the frog into the 5 green boxes without dying!</p>
+        <img src= "/static/images/jumpyFrog.png" alt="connect 4 screenshot" style="width:200px; height:200px;">
+        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
+    </div>
+    
 </body>
 </html>

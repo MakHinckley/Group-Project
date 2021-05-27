@@ -1,18 +1,21 @@
+
 import pygame
+from pygame.locals import *
 import turtle 
 import math
 import time
 import random
 import os
 
-wn=turtle.Screen()
+
+wn =turtle.Screen()
 wn.title("Jumpy Frog")
 wn. setup(600, 800)
 wn.cv._rootwindow.resizable(False, False)
 os.chdir('main\static\images/frogger')
 wn.bgpic('background.gif')
 
-shapes = ["frogger1.gif", "car_left.gif", "car_right.gif", "log_full.gif", "turtle_left.gif", "turtle_right.gif", "turtle_left_half.gif", "turtle_right_half.gif", "turtle_submerged.gif", "home.gif", "frog_home.gif"]
+shapes = ["frogger1.gif", "car_left.gif", "car_right.gif", "log_full.gif", "turtle_left.gif", "turtle_right.gif", "turtle_left_half.gif", "turtle_right_half.gif", "turtle_submerged.gif", "home.gif", "frog_home.gif","frogger1small.gif"]
 for shape in shapes:
     wn.register_shape(shape)
 
@@ -50,6 +53,13 @@ class Player1(Frog):
         self.dx = 0
         self.collision= False
         self.frogs_home = 0
+        self.max_time = 60
+        self.time_remaining = 60
+        self.start_time= time.time()
+        self.lives= 4
+
+
+
     def up(self):
         self.y += 50 
     def down(self):
@@ -65,10 +75,21 @@ class Player1(Frog):
         if self.x < -300 or self.x > 300:
             self.x = 0
             self.y= -300
+        
+        self.time_remaining = self.max_time - round(time.time()- self.start_time)
+
+        if self.time_remaining <=0:
+            player.lives -=1
+            self.go_back()
+    
     def go_back(self):
         self.dx = 0
         self.x= 0
         self.y =-300
+        self.max_time = 60
+        self.time_remaining = 60
+        self.start_time = time.time()
+        
 
 class Car(Frog):
     def __init__(self, x, y, width, height, image,dx):
@@ -148,10 +169,27 @@ class Home(Frog):
     def __init__(self, x, y, width, height, image):
         Frog.__init__(self, x, y, width, height, image)
         self.dx = 0
-
+class Timer():
+    def __init__(self, max_time):
+        self.x = 200
+        self.y = -350
+        self.max_time= max_time
+        self.width= 200
+    
+    def render(self,time, pen):
+        pen.color("green")
+        pen.pensize(5)
+        pen.penup()
+        pen.goto(self.x, self.y)
+        pen.pendown()
+        percent = time/self.max_time
+        dx = percent * self.width 
+        pen.goto(self.x-dx, self.y)
+        pen.penup()
 
 #KeyBindings
 player= Player1(0, -300, 40, 40, "frogger1.gif")
+timer= Timer(60)
 level_1= [ 
 Car(0,-250, 121, 40, "car_left.gif", -0.6 ),
 Car(221,-250, 121, 40, "car_left.gif", -0.6 ),
@@ -208,11 +246,21 @@ while True:
         frog.render(pen)
         frog.update()
 
+    timer.render(player.time_remaining, pen)
+    
+    pen.goto(-290, -350)
+    pen.shape("frogger1small.gif")
+    for life in range(player.lives):
+        pen.goto(-280 +(life * 30), -350)
+        pen.stamp()
+    
     player.dx=0
     player.collision = False
+    
     for frog in frogs:
         if player.is_collision(frog):
             if isinstance(frog, Car):
+                player.lives -= 1
                 player.go_back()
                 break
             
@@ -233,13 +281,22 @@ while True:
                 break
     
     if player.y > 0 and player.collision !=True:
+        player.lives -= 1
         player.go_back()
     
     if player.frogs_home ==5:
-        player.go_back
+        player.go_back()
         player.frogs_home =0
         for home in homes:
             home.image = "home.gif"
+    
+    if player.lives==0:
+        player.go_back()
+        player.frogs_home =0
+        for home in homes:
+            home.image = "home.gif"
+        player.lives= 4
+    
     wn.update()
     
     pen.clear()
