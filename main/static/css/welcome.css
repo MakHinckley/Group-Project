@@ -23,7 +23,12 @@
 .games h5{
     color:rgb(11, 241, 115);
     text-shadow: 4px 3px 3px rgb(85,199,197);
+    margin:2%;
+    padding:10px;
 }
 .games p{
     color:rgb(11, 241, 115);
+    margin: 2%;
+    padding:5px;
+
 }

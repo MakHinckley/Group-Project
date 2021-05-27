@@ -1,3 +1,4 @@
+
 import pygame
 import turtle 
 import math
@@ -5,7 +6,7 @@ import time
 import random
 import os
 
-wn=turtle.Screen()
+wn =turtle.Screen()
 wn.title("Jumpy Frog")
 wn. setup(600, 800)
 wn.cv._rootwindow.resizable(False, False)
