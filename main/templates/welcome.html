@@ -22,30 +22,34 @@
         <a class="back" href="/logout">Logout</a>
         <h1>Welcome {{logged_user.alias_gamert}}!</h1> 
     </div>
+
     <div class="games">
-        <h5>Space Shooter game </h5>
-        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src="#">
+        <h5>Space Shooter </h5>
         <p> A game where you shoot at your opponent and try to get their health to 0!</p>
-    </div>
-    <div class="games">
-        <h5>Sudoku </h5>
+        <img src= "/static/images/spaceShooter.png" alt="connect 4 screenshot" style="width:200px; height:200px;">
         <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src= "#">
-        <p>Something to describe Sudoku!</p>
-    </div>
-    <div class="games">
-        <h5>Frog Jump </h5>
-        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src="#">
-        <p> Try to get your frog across the board without getting hit!</p>
-    </div>
-    <div class="games">
-        <h5>Connect 4</h5>
-        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
-        <img src="#">
-        <p> Try to get four chips in a row without being interupted!</p>
     </div>
 
+    <div class="games">
+        <h5>Sudoku </h5>
+        <p> Try to fill the empty boxes without any repeat numbers!</p>
+        <img src= "/static/images/sudoku.png" alt="connect 4 screenshot" style="width:200px; height:200px;">
+        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
+    </div>
+
+    <div class="games">
+        <h5>Connect 4 </h5>
+        <p> Try to get four tokens in a row before your opponent!</p>
+        <img src= "/static/images/connect4.jpg" alt="connect 4 screenshot" style="width:200px; height:200px;">
+        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
+    </div>
+
+    <div class="games">
+        <h5>Jumpy Frog </h5>
+        <p> Get the frog into the 5 green boxes without dying!</p>
+        <img src= "/static/images/jumpyFrog.png" alt="connect 4 screenshot" style="width:200px; height:200px;">
+        <a class="btn btn-outline-warning" href="/gamePage" role="button">Play Now!</a>
+    </div>
+    
 </body>
 </html>
