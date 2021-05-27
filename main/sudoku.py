@@ -33,8 +33,6 @@ def insert(win, position):
                     pygame.display.update()
                     return
                 return
-        
-
 
 def main():    
     pygame.init()
@@ -47,7 +45,6 @@ def main():
         if(i%3 == 0):
             pygame.draw.line(win, (0,0,0), (50 + 50*i, 50), (50 + 50*i ,500 ), 4 )
             pygame.draw.line(win, (0,0,0), (50, 50 + 50*i), (500, 50 + 50*i), 4 )
-
         pygame.draw.line(win, (0,0,0), (50 + 50*i, 50), (50 + 50*i ,500 ), 2 )
         pygame.draw.line(win, (0,0,0), (50, 50 + 50*i), (500, 50 + 50*i), 2 )
     pygame.display.update()
@@ -58,7 +55,6 @@ def main():
                 value = myfont.render(str(grid[i][j]), True, original_grid_element_color)
                 win.blit(value, ((j+1)*50 + 15, (i+1)*50 ))
     pygame.display.update()
-            
         
     while True: 
         for event in pygame.event.get():
@@ -68,5 +64,4 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 return
-   
 main()
