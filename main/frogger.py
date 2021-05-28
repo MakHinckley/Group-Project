@@ -12,7 +12,7 @@ wn =turtle.Screen()
 wn.title("Jumpy Frog")
 wn. setup(600, 800)
 wn.cv._rootwindow.resizable(False, False)
-os.chdir('main\static\images/frogger')
+os.chdir('main\static\images')
 wn.bgpic('background.gif')
 
 shapes = ["frogger1.gif", "car_left.gif", "car_right.gif", "log_full.gif", "turtle_left.gif", "turtle_right.gif", "turtle_left_half.gif", "turtle_right_half.gif", "turtle_submerged.gif", "home.gif", "frog_home.gif","frogger1small.gif"]
