@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\siber\\AppData\\Local\\Programs\\Python\\Python39-32\\python.exe",
+    "python.pythonPath": "C:\\Users\\makai\\AppData\\Local\\Programs\\Python\\Python39-32\\python.exe",
     "python.autoComplete.extraPaths": ["./**"],
     "python.envFile": ".env",
     "python.analysis.extraPaths": [
